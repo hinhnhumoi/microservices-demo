@@ -1,0 +1,20 @@
+
+server:
+  port: 9296
+
+spring:
+  application:
+    name: CONFIG-SERVER
+  profiles:
+    active: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: src/main/resources
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hinhnhumoi/config-server.git
+          clone-on-start: true
